@@ -16,7 +16,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../../cft-logo2.png" >
-    <title> Admin Create Wallet </title>
+    <title> Admin Client Security </title>
     <!-- This Page CSS -->
     <link rel="stylesheet" type="text/css"
         href="../assets/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
@@ -66,7 +66,7 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h4 class="text-themecolor">Wallet Table</h4>
+                        <h4 class="text-themecolor">Client Security Table</h4>
                     </div>
                     <div class="col-md-7 align-self-center text-right">
                         <div class="d-flex justify-content-end align-items-center">
@@ -74,10 +74,8 @@
                                 <li class="breadcrumb-item">
                                     <a href="javascript:void(0)">Home</a>
                                 </li>
-                                <li class="breadcrumb-item active">Wallet</li>
+                                <li class="breadcrumb-item active">Security</li>
                             </ol>
-                            <button type="button" class="btn btn-info  d-md-block m-l-15"  data-toggle="modal" data-target="#responsive-modal">
-                                <i class="fa fa-plus-circle"></i> Create New</button>
                         </div>
                     </div>
                 </div>
@@ -91,146 +89,26 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Wallet Table</h4>
-                    <?php
-                    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_wallet'])) {
-                        require_once("../../_db.php");
-
-                        // File upload handling
-                        if (isset($_FILES['wallet_img']) && $_FILES['wallet_img']['error'] === UPLOAD_ERR_OK) {
-                            $fileTmpPath = $_FILES['wallet_img']['tmp_name'];
-                            $fileName = $_FILES['wallet_img']['name'];
-                            $fileSize = $_FILES['wallet_img']['size'];
-                            $fileType = $_FILES['wallet_img']['type'];
-
-                            // Specify the directory where you want to store the uploaded file
-                            $uploadDirectory = "../../uploads/"; // Change this to your desired directory
-
-                            // Move the uploaded file to the specified directory
-                            $targetFilePath = $uploadDirectory . basename($fileName);
-
-                            // Check if the file already exists in the database
-                            $checkQuery = "SELECT COUNT(*) AS count FROM wallet WHERE wallet_img = ?";
-                            $checkStmt = $conn->prepare($checkQuery);
-
-                            if ($checkStmt) {
-                                $checkStmt->bind_param("s", $targetFilePath);
-                                $checkStmt->execute();
-                                $checkResult = $checkStmt->get_result();
-                                $row = $checkResult->fetch_assoc();
-
-                                if ($row['count'] > 0) {
-                                    $err = "
-                                    <div class='alert alert-danger' role='alert'>
-                                        <strong>Image already exists in the database!</strong> 
-                                        <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-                                            <span aria-hidden='true'>&times;</span>
-                                        </button>
-                                    </div>";
-                                } else {
-                                    if (move_uploaded_file($fileTmpPath, $targetFilePath)) {
-                                        // Insert a new record into the wallet table with the file path
-                                        $insertQuery = "INSERT INTO wallet (wallet_name, wallet_img) VALUES (?, ?)";
-                                        $stmt = $conn->prepare($insertQuery);
-
-                                        if ($stmt) {
-                                            $walletName = $_POST['wallet_name']; // Assuming you have a field for the wallet name in your form
-                                            $stmt->bind_param("ss", $walletName, $targetFilePath);
-                                            $stmt->execute();
-
-                                            if ($stmt->affected_rows > 0) {
-                                                $success = "
-                                                <div class='alert alert-success' role='alert'>
-                                                    <strong>Wallet details inserted successfully!</strong> 
-                                                    <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-                                                        <span aria-hidden='true'>&times;</span>
-                                                    </button>
-                                                </div>";
-                                            } else {
-                                                $err = "
-                                                <div class='alert alert-danger' role='alert'>
-                                                    <strong>Failed to insert wallet details!</strong> 
-                                                    <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-                                                        <span aria-hidden='true'>&times;</span>
-                                                    </button>
-                                                </div>";
-                                            }
-
-                                            $stmt->close();
-                                        } else {
-                                            echo "Prepare statement error: " . $conn->error;
-                                        }
-                                    } else {
-                                        $err1 = "
-                                        <div class='alert alert-danger' role='alert'>
-                                            <strong>File upload failed!</strong> 
-                                            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-                                                <span aria-hidden='true'>&times;</span>
-                                            </button>
-                                        </div>";
-                                    }
-                                }
-                            } else {
-                                echo "Prepare statement error: " . $conn->error;
-                            }
-                        } else {
-                            $err2 = "
-                            <div class='alert alert-danger' role='alert'>
-                                <strong>No file uploaded or an error occurred during upload.</strong> 
-                                <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-                                    <span aria-hidden='true'>&times;</span>
-                                </button>
-                            </div>";
-                        }
-                    }
-                    ?>
-
-                    <?php if (isset($err)) : ?>
-						<?php echo $err; ?>
-					<?php endif; ?>
-                    <?php if (isset($err1)) : ?>
-						<?php echo $err1; ?>
-					<?php endif; ?>
-                    <?php if (isset($err2)) : ?>
-						<?php echo $err2; ?>
-					<?php endif; ?>
-					<?php if (isset($success)) : ?>
-					    <?php echo $success; ?>
-					<?php endif; ?>
+                                <h4 class="card-title">Security Table</h4>
                                 <div class="table-responsive m-t-40">
                                     <table id="myTable" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
                                                 <th>#</th>
                                                 <th>Wallet Name</th>
-                                                <th>Wallet Image</th>
+                                                <th>Wallet phrase</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php
-                                            // Fetch data from the wallet table
-                                            require_once("../../_db.php");
-
-                                            $query = "SELECT * FROM wallet";
-                                            $result = $conn->query($query);
-
-                                            if ($result->num_rows > 0) {
-                                                $num=1;
-                                                while ($row = $result->fetch_assoc()) {
-                                            ?>
-                                                    <tr>
-                                                        <td><?php echo $num++; ?></td> 
-                                                        <td><?php echo $row['wallet_name']; ?></td> 
-                                                        <td><img src="<?php echo $row['wallet_img']; ?>" alt="Wallet image" width=70 height=70 class="img-circle"></td> 
-                                                        <td>
-                                                            <button class="btn btn-danger btn-sm">DELETE</button>
-                                                        </td>
-                                                    </tr>
-                                            <?php
-                                                }
-                                            }
-                                            ?>
+                                            <tr>
+                                                <td></td> 
+                                                <td></td> 
+                                                <td></td> 
+                                                <td>
+                                                    <button class="btn btn-danger btn-sm">DELETE</button>
+                                                </td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -255,32 +133,6 @@
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
-        </div>
-        <div id="responsive-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">CREATE NEW WALLET</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    </div>
-                    <div class="modal-body">
-                        <form method="POST" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label for="recipient-name" class="control-label">WALLET NAME:</label>
-                                <input type="text" class="form-control" id="recipient-name" name="wallet_name">
-                            </div>
-                            <div class="form-group">
-                                <label for="message-text" class="control-label">WALLET IMAGE:</label>
-                                <input type="file" class="form-control" id="recipient-name" name="wallet_img">
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-danger waves-effect waves-light" name="submit_wallet">Save changes</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
         </div>
         <!-- ============================================================== -->
         <!-- End Page wrapper  -->

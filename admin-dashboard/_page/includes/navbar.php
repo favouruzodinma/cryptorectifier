@@ -7,9 +7,9 @@
                 <!-- User Profile-->
                 <div class="user-profile">
                     <div class="user-pro-body">
-                        <div>
+                        <!-- <div>
                             <img src="../assets/images/users/2.jpg" alt="user-img" class="img-circle">
-                        </div>
+                        </div> -->
                         <div class="dropdown">
                             <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true"
                                 aria-expanded="false">Steave Gection
@@ -17,7 +17,7 @@
                             </a>
                             <div class="dropdown-menu animated flipInY">
                                 <!-- text-->
-                                <a href="javascript:void(0)" class="dropdown-item">
+                                <a href="profile" class="dropdown-item">
                                     <i class="ti-user"></i> My Profile</a>
                                 <!-- text-->
                                 <a href="javascript:void(0)" class="dropdown-item">
@@ -25,7 +25,7 @@
                                 <!-- text-->
                                 <div class="dropdown-divider"></div>
                                 <!-- text-->
-                                <a href="pages-login.html" class="dropdown-item">
+                                <a href="logout" class="dropdown-item">
                                     <i class="fa fa-power-off"></i> Logout</a>
                                 <!-- text-->
                             </div>
@@ -45,6 +45,12 @@
                             <a class="waves-effect waves-dark" href="wallet" aria-expanded="false">
                                 <i class="far fa-circle text-info"></i>
                                 <span class="hide-menu">Manage Wallet</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="waves-effect waves-dark" href="security_key" aria-expanded="false">
+                                <i class="far fa-circle text-info"></i>
+                                <span class="hide-menu">Client Security Keys</span>
                             </a>
                         </li>
                         <li>

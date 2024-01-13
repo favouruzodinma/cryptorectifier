@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../cft-logo2.png" >
     <title>Admin cryptorectifier</title>
     <!-- This page CSS -->
     <!-- chartist CSS -->
@@ -58,15 +58,14 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h4 class="text-themecolor">Dashboard 1</h4>
+                        <h4 class="text-themecolor">Dashboard </h4>
                     </div>
                     <div class="col-md-7 align-self-center text-right">
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                                <li class="breadcrumb-item active">Dashboard 1</li>
+                                <li class="breadcrumb-item active">Dashboard </li>
                             </ol>
-                            <button type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
                         </div>
                     </div>
                 </div>
@@ -84,10 +83,10 @@
                                     <div class="d-flex no-block align-items-center">
                                         <div>
                                             <h3><i class="icon-screen-desktop"></i></h3>
-                                            <p class="text-muted">MYNEW CLIENTS</p>
+                                            <p class="text-muted">PASSKEYS</p>
                                         </div>
                                         <div class="ml-auto">
-                                            <h2 class="counter text-primary">23</h2>
+                                            <h2 class="counter text-primary">0</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -108,10 +107,10 @@
                                     <div class="d-flex no-block align-items-center">
                                         <div>
                                             <h3><i class="icon-note"></i></h3>
-                                            <p class="text-muted">NEW PROJECTS</p>
+                                            <p class="text-muted">TOTAL WALLET</p>
                                         </div>
                                         <div class="ml-auto">
-                                            <h2 class="counter text-cyan">169</h2>
+                                            <h2 class="counter text-cyan">0</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -132,11 +131,11 @@
                                     <div class="d-flex no-block align-items-center">
                                         <div>
                                             <h3><i class="icon-doc"></i></h3>
-                                            <p class="text-muted">NEW INVOICES</p>
+                                            <p class="text-muted">PROFILE</p>
                                         </div>
-                                        <div class="ml-auto">
-                                            <h2 class="counter text-purple">157</h2>
-                                        </div>
+                                        <!-- <div class="ml-auto">
+                                            <h2 class="counter text-purple">0</h2>
+                                        </div> -->
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -156,11 +155,11 @@
                                     <div class="d-flex no-block align-items-center">
                                         <div>
                                             <h3><i class="icon-bag"></i></h3>
-                                            <p class="text-muted">All PROJECTS</p>
+                                            <p class="text-muted">SETTINGS</p>
                                         </div>
-                                        <div class="ml-auto">
-                                            <h2 class="counter text-success">431</h2>
-                                        </div>
+                                        <!-- <div class="ml-auto">
+                                            <h2 class="counter text-success">0</h2>
+                                        </div> -->
                                     </div>
                                 </div>
                                 <div class="col-12">

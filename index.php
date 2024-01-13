@@ -88,7 +88,7 @@
               <br>
               You will be on a chat with an Artificial Intelligence Robot with zero Human interference.
             </p>
-            <a href="app/connect" type="submit" class="btn btn-outline-primary w-50">Connect Wallet</a>
+            <a href="app/_page/connect" type="submit" class="btn btn-outline-primary w-50">Connect Wallet</a>
 
           </div>
         </div>
@@ -109,7 +109,7 @@
 
         <div class="row gy-4">
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up"> 
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up"> 
             <div class="icon flex-shrink-0"><i class="bi bi-check2-circle"></i></div>
             <div>
               <h4 class="title">Migration Issues</h4>
@@ -117,7 +117,7 @@
             </div>
           </a>      
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
             <div class="icon flex-shrink-0"><i class="bi bi-calculator"></i></div>
             <div>
               <h4 class="title">Validate or Syncronize</h4>
@@ -125,7 +125,7 @@
             </div><!-- End Service Item -->
           </a>
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="200">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="200">
             <div class="icon flex-shrink-0"><i class="bi bi-bank"></i></div>
             <div>
               <h4 class="title">Assets Recovery</h4>
@@ -137,7 +137,7 @@
 
          <div class="row gy-4">
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up">
             <div class="icon flex-shrink-0"><i class="bi bi-bank"></i></div>
             <div>
               <h4 class="title">Rectification Issues</h4>
@@ -145,7 +145,7 @@
             </div>
           </a>   
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
             <div class="icon flex-shrink-0"><i class="bi bi-bank"></i></div>
             <div>
               <h4 class="title">Stake</h4>
@@ -153,7 +153,7 @@
             </div>
           </a>
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="200">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="200">
             <div class="icon flex-shrink-0"><i class="bi bi-bank"></i></div>
             <div>
               <h4 class="title">Unstake</h4>
@@ -166,7 +166,7 @@
 
          <div class="row gy-4">
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up">
             <div class="icon flex-shrink-0"><i class="bi bi-rss"></i></div>
             <div>
               <h4 class="title">High Gas Fee</h4>
@@ -174,14 +174,14 @@
             </div>
           </a>      
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
             <div class="icon flex-shrink-0"><i class="bi bi-pie-chart"></i></div>
             <div>
               <h4 class="title">Slippage Error</h4>
               <p class="description">Click here for slippage related error during trade</p>
             </div>
           </a>
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="200">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="200">
             <div class="icon flex-shrink-0"><i class="bi bi-calculator"></i></div>
             <div>
               <h4 class="title">Transaction Error</h4>
@@ -193,7 +193,7 @@
 
          <div class="row gy-4">
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up">
             <div class="icon flex-shrink-0"><i class="bi bi-diagram-3"></i></div>
             <div>
               <h4 class="title">Cross Chain Transfer</h4>
@@ -201,14 +201,14 @@
             </div>
           </a>      
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
             <div class="icon flex-shrink-0"><i class="bi bi-clock-history"></i></div>
             <div>
               <h4 class="title">Staking Issues</h4>
               <p class="description">Click here for staking related issues</p>
             </div>
           </a>
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="200">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="200">
             <div class="icon flex-shrink-0"><i class="bi bi-nintendo-switch"></i></div>
             <div>
               <h4 class="title">Swap/Exchange</h4>
@@ -219,7 +219,7 @@
 
         <div class="row gy-4">
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up">
             <div class="icon flex-shrink-0"><i class="bi bi-bank2"></i></div>
             <div>
               <h4 class="title">Claim Reflection</h4>
@@ -227,14 +227,14 @@
             </div>
           </a>      
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
             <div class="icon flex-shrink-0"><i class="bi bi-bar-chart-line"></i></div>
             <div>
               <h4 class="title">Connect dapps</h4>
               <p class="description">Click here for errors while connection to dapps</p>
             </div>
           </a>
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="200">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="200">
             <div class="icon flex-shrink-0"><i class="bi bi-shield-lock"></i></div>
             <div>
               <h4 class="title">Login issues</h4>
@@ -245,7 +245,7 @@
 
         <div class="row gy-4">
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up">
             <div class="icon flex-shrink-0"><i class="bi bi-phone-flip"></i></div>
             <div>
               <h4 class="title">Claim Airdrop</h4>
@@ -253,14 +253,14 @@
             </div>
           </a>      
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
             <div class="icon flex-shrink-0"><i class="bi bi-motherboard"></i></div>
             <div>
               <h4 class="title">NFT issues</h4>
               <p class="description">Click here for NFTs minting/transfer related issues</p>
             </div>
           </a>
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="200">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="200">
             <div class="icon flex-shrink-0"><i class="bi bi-ticket-detailed"></i></div>
             <div>
               <h4 class="title">Missing/irregular Balance</h4>
@@ -271,7 +271,7 @@
 
         <div class="row gy-4">
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up">
             <div class="icon flex-shrink-0"><i class="bi bi-plus-lg"></i></div>
             <div>
               <h4 class="title">Whitelist issues</h4>
@@ -279,14 +279,14 @@
             </div>
            </a>      
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
             <div class="icon flex-shrink-0"><i class="bi bi-geo-alt-fill"></i></div>
             <div>
               <h4 class="title">Transaction Delay</h4>
               <p class="description">Click here for any issues related to transaction delayed.</p>
             </div>
           </a>
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="200">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="200">
             <div class="icon flex-shrink-0"><i class="bi bi-shield-lock"></i></div>
             <div>
               <h4 class="title">Locked Account</h4>
@@ -297,7 +297,7 @@
 
         <div class="row gy-4">
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up">
             <div class="icon flex-shrink-0"><i class="bi bi-graph-down-arrow"></i></div>
             <div>
               <h4 class="title">Trading wallet issues</h4>
@@ -305,7 +305,7 @@
             </div> 
           </a>      
 
-         <a href="app/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
+         <a href="app/_page/connect" class="col-lg-4 col-md-6 service-item d-flex card " data-aos="fade-up" data-aos-delay="100">
             <div class="icon flex-shrink-0"><i class="bi bi-bank"></i></div>
             <div>
               <h4 class="title">Other issues Not listed</h4>

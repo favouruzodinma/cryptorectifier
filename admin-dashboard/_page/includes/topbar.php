@@ -5,20 +5,21 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="../../">
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <img src="../../cft-logo2.png" alt="homepage" class="dark-logo" width=80 height=80 />
                             <!-- Light Logo icon -->
-                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                            <img src="../../cft-logo2.png" alt="homepage" class="light-logo" width=80 height=80/>
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
                          <!-- dark Logo text -->
-                         <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                         <img src="../../cft-logo2.png" alt="homepage" class="dark-logo" height=80 width=100/>
                          <!-- Light Logo text -->    
-                         <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                         <img src="../../cft-logo2.png" class="light-logo" alt="homepage" height=80 width=100
+/></span> </a>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
