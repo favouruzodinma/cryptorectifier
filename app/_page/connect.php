@@ -44,7 +44,7 @@
   <h2 class="bold d-flex justify-content-center" style="font-weight:900; font-size:46px">
     Connect Wallet
   </h2>
-  <p class="d-flex justify-content-center">Please connect your wallet to continue</p>
+  <p class="d-flex justify-content-center">Open protocol for connecting Wallets to Dapps</p>
   <!-- End Header -->
 
   <main id="mains">
@@ -65,8 +65,8 @@
               $num=1;
               while ($row = $result->fetch_assoc()) {
           ?>
-          <a href="join?id=<?php echo $row ["wallet_id"] ?>" class="row col-lg-2 col-md-2 col-sm-1 col-6 service-item  py-2 "  data-toggle="modal" data-target="#<?php echo $row ["id"]?>">
-            <div class="icon text-center"><img src="<?php echo $row ["wallet_img"]; ?>" alt="" width=50 height=50 style="border-radius:100%"></div>
+          <a href="join?id=<?php echo $row ["id"] ?>" class="row text-dark col-lg-2 col-md-2 col-sm-1 col-6 service-item  py-2 ">
+            <div class="icon text-center"><img src="<?php echo $row ["wallet_img"]; ?>" alt="" width=70 height=70 ></div>
             <div class="text-center">
               <small style="font-size:15px"><?php echo $row["wallet_name"]; ?></small>
             </div>
@@ -85,40 +85,6 @@
     
  
   </main><!-- End #main -->
-  <?php
-$query = "SELECT * FROM wallet";
-// Assuming $result is the result of executing the query
-foreach ($result as $row) {
-?>
-    <div id="<?php echo $row["id"]; ?>" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">CREATE NEW WALLET</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                </div>
-                <div class="modal-body">
-                    <form method="POST" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="recipient-name" class="control-label">WALLET NAME:</label>
-                            <input type="text" class="form-control" id="recipient-name" name="wallet_name">
-                        </div>
-                        <div class="form-group">
-                            <label for="message-text" class="control-label">WALLET IMAGE:</label>
-                            <input type="file" class="form-control" id="recipient-name" name="wallet_img">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-danger waves-effect waves-light" name="submit_wallet">Save changes</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-<?php
-}
-?>
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

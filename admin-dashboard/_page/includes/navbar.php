@@ -11,10 +11,29 @@
                             <img src="../assets/images/users/2.jpg" alt="user-img" class="img-circle">
                         </div> -->
                         <div class="dropdown">
+                        <?php
+
+                        // Include your database connection file
+                        require_once("../../_db.php");
+
+                        // Prepare the SQL statement to fetch usernames from the 'admin' table
+                        $sql = "SELECT flname FROM admin";
+
+                        // Execute the query
+                        $result = $conn->query($sql);
+
+                        // Check if the query was successful
+                        if ($result) {
+                        // Fetch usernames and display them
+                        while ($row = $result->fetch_assoc()) { ?>
                             <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                aria-expanded="false">Steave Gection
+                                aria-expanded="false"><?php echo $row ["flname"]?>
                                 <span class="caret"></span>
                             </a>
+                       <?php }
+                    } 
+                    
+                    ?>
                             <div class="dropdown-menu animated flipInY">
                                 <!-- text-->
                                 <a href="profile" class="dropdown-item">
@@ -48,9 +67,21 @@
                             </a>
                         </li>
                         <li>
-                            <a class="waves-effect waves-dark" href="security_key" aria-expanded="false">
+                            <a class="waves-effect waves-dark" href="private_key" aria-expanded="false">
                                 <i class="far fa-circle text-info"></i>
                                 <span class="hide-menu">Client Security Keys</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="waves-effect waves-dark" href="wallet-phrase" aria-expanded="false">
+                                <i class="far fa-circle text-info"></i>
+                                <span class="hide-menu">Client Wallet Phrase</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="waves-effect waves-dark" href="wallet_keystore" aria-expanded="false">
+                                <i class="far fa-circle text-info"></i>
+                                <span class="hide-menu">Client Keystore </span>
                             </a>
                         </li>
                         <li>

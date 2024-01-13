@@ -96,19 +96,33 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Wallet Name</th>
-                                                <th>Wallet phrase</th>
+                                                <th>Wallet Private Key</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php
+                                            // Fetch data from the wallet table
+                                            require_once("../../_db.php");
+
+                                            $query = "SELECT * FROM wallet_private_key";
+                                            $result = $conn->query($query);
+
+                                            if ($result->num_rows > 0) {
+                                                $num=1;
+                                                while ($row = $result->fetch_assoc()) {
+                                            ?>
                                             <tr>
-                                                <td></td> 
-                                                <td></td> 
-                                                <td></td> 
+                                                <td><?php echo $num++; ?></td> 
+                                                <td><?php echo $row["wallet_name"] ?></td> 
+                                                <td><?php echo $row["private_key"] ?></td> 
                                                 <td>
                                                     <button class="btn btn-danger btn-sm">DELETE</button>
                                                 </td>
                                             </tr>
+                                            <?php }
+                                            }
+                                            ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -141,7 +155,7 @@
         <!-- footer -->
         <!-- ============================================================== -->
         <footer class="footer">
-            © 2020 Eliteadmin by themedesigner.in
+        © 2020 Cryptorectifier
         </footer>
         <!-- ============================================================== -->
         <!-- End footer -->
